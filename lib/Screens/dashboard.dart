@@ -26,10 +26,12 @@ class Dashboard extends StatelessWidget {
     {
       "icon": "http://devapiv4.dealsdray.com/icons/Image 7.png",
       "offer": "14%",
-      "label": "Redmin Note 7s (Sapphire Blue 64 GB)",
+      "label": "Redmi Note 7s (Sapphire Blue 64 GB)",
       "SubLabel": "",
     },
   ];
+
+  Dashboard({super.key});
 
   @override
   Widget build(BuildContext context) {

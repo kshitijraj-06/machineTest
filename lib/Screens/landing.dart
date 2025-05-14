@@ -6,6 +6,8 @@ import 'package:loading_indicator/loading_indicator.dart';
 import '../Services/device_info_service.dart';
 
 class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
+
   @override
   State<SplashScreen> createState() => _SplashScreenState();
 }

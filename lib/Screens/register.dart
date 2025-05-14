@@ -6,6 +6,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:loading_indicator/loading_indicator.dart';
 
 class Register extends StatefulWidget {
+  const Register({super.key});
+
   @override
   State<Register> createState() => _RegisterState();
 }

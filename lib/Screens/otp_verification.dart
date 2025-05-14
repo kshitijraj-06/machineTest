@@ -8,6 +8,8 @@ import 'package:pinput/pinput.dart';
 import '../Services/otp_verification.dart';
 
 class OTPVerification extends StatefulWidget{
+  const OTPVerification({super.key});
+
   @override
   State<OTPVerification> createState() => _OTPVerificationState();
 }

@@ -16,6 +16,8 @@ void main()async{
 }
 
 class CSTechApp extends StatelessWidget{
+  const CSTechApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(

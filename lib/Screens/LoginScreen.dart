@@ -1,10 +1,11 @@
-import 'package:cs_tech/Services/device_info_service.dart';
 import 'package:cs_tech/Services/otp.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class LoginScreen extends StatefulWidget{
+  const LoginScreen({super.key});
+
   @override
   State<LoginScreen> createState() => _LoginScreenState();
 }
