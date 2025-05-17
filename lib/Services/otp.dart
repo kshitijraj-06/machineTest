@@ -7,7 +7,7 @@ import 'device_info_service.dart';
 
 class OtpService extends GetxController {
   final phoneController = TextEditingController();
-  final InfoService infoService = Get.find<InfoService>(); // Use existing instance
+  final InfoService infoService = Get.find<InfoService>();
   var userId = ''.obs;
   var isLoading = false.obs;
   var errorMessage = ''.obs;
@@ -26,10 +26,10 @@ class OtpService extends GetxController {
     try {
       final response = await http.post(
         Uri.parse('http://devapiv4.dealsdray.com/api/v2/user/otp'),
-        headers: {'Content-Type': 'application/json'}, // Add header
-        body: jsonEncode({ // Use proper JSON encoding
+        headers: {'Content-Type': 'application/json'},
+        body: jsonEncode({
           'mobileNumber': phone,
-          'deviceId': infoService.deviceId.value, // Access from GetX-managed service
+          'deviceId': infoService.deviceId.value,
         }),
       );
 
@@ -38,7 +38,7 @@ class OtpService extends GetxController {
 
       if (response.statusCode == 200) {
         final data = jsonDecode(response.body);
-        userId.value = data['data']['userId']?.toString() ?? ''; // Update observable
+        userId.value = data['data']['userId']?.toString() ?? '';
         print('OTP sent successfully. User ID: ${userId.value}');
         Get.offNamed('/otp_verify');
       } else {

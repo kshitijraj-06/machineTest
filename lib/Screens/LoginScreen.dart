@@ -98,7 +98,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     controller.sendOtp();
                   },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Color(0xFFFFBDBD), // Light red
+                    backgroundColor: Color(0xFFFFBDBD),
                     foregroundColor: Colors.white,
                     padding: EdgeInsets.symmetric(vertical: 16),
                     shape: RoundedRectangleBorder(
@@ -109,7 +109,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   child: Text(
                     "SEND CODE",
                     style: GoogleFonts.poppins(
-                      color: Color(0xFFD32F2F), // Red text
+                      color: Color(0xFFD32F2F),
                       fontWeight: FontWeight.bold,
                       fontSize: 16,
                       letterSpacing: 1.2,

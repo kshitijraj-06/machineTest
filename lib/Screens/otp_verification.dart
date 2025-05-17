@@ -130,10 +130,8 @@ class _OTPVerificationState extends State<OTPVerification> {
                       GestureDetector(
                         onTap: _start == 0
                             ? () {
-                          // Handle resend OTP logic here
                           _startTimer();
                           otpService.sendOtp();
-                          // You can also trigger your resend OTP API here
                         }
                             : null,
                         child: Text(

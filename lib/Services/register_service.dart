@@ -19,7 +19,6 @@ class RegisterService extends GetxController {
     final referralCodeText = referralcontroller.text.trim();
     final userId = otpService.userId.value;
 
-    // Basic validation
     if (email.isEmpty || password.isEmpty || userId.isEmpty) {
       Get.snackbar('Error', 'Please fill in all fields',
           backgroundColor: Colors.red, colorText: Colors.white);
@@ -31,7 +30,7 @@ class RegisterService extends GetxController {
     try {
       final response = await http.post(
         Uri.parse('http://devapiv4.dealsdray.com/api/v2/user/email/referral'),
-        headers: {'Content-Type': 'application/json'}, // Important!
+        headers: {'Content-Type': 'application/json'},
         body: jsonEncode({
           'email': email,
           'password': password,
@@ -48,7 +47,6 @@ class RegisterService extends GetxController {
             backgroundColor: Colors.green, colorText: Colors.white);
         Get.offAllNamed('/dashboard');
 
-        // You can handle success logic here
       } else {
         print('Registration failed: ${response.body}');
         Get.snackbar('Error', response.body,

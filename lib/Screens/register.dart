@@ -117,7 +117,7 @@ class _RegisterState extends State<Register> {
                         onPressed: ()async {
                           await registerService.register();
                         },
-                        backgroundColor: Color(0xFFD32F2F), // Red color
+                        backgroundColor: Color(0xFFD32F2F),
                         child: Icon(Icons.arrow_forward, color: Colors.white),
                       ),
                     ),

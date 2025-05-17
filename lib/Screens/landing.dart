@@ -61,31 +61,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 ),
               );
             }
-            return Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                if (infoService.deviceId.isNotEmpty)
-                  Text('Device ID: ${infoService.deviceId}',
-                      style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white)),
-                if (infoService.errorMessage.value.isNotEmpty) ...[
-                  SizedBox(height: 20),
-                  Text('Error: ${infoService.errorMessage.value}',
-                      style: TextStyle(color: Colors.red)),
-                  SizedBox(height: 20),
-                  ElevatedButton(
-                    onPressed: collectsendData,
-                    child: Text('Retry'),
-                  )
-                ],
-                if (infoService.deviceInfo.value != null)
-                  Expanded(
-                    child: SingleChildScrollView(
-                      child: Text('Collected Data:\n${jsonEncode(infoService.deviceInfo.value!.toJson())}',
-                          style: TextStyle(color: Colors.white)),
-                    ),
-                  ),
-              ],
-            );
+            return Column();
           })
         ),
       ]),
